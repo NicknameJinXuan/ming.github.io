@@ -2161,62 +2161,41 @@ input, select, textarea {
 /* Image */
 
 	.image {
-		border: 0;
-		display: inline-block;
-		position: relative;
+	    border: 0;
+	    display: inline-block;
+	    position: relative;
 	}
-
-		.image img {
-			display: block;
-		}
-
-		.image.left, .image.right {
-			max-width: 30%;
-		}
-
-			.image.left img, .image.right img {
-				width: 100%;
-			}
-
-		.image.left {
-			float: left;
-			margin: 0 1.5em 1.25em 0;
-			top: 0.25em;
-		}
-
-		.image.right {
-			float: right;
-			margin: 0 0 1.25em 1.5em;
-			top: 0.25em;
-		}
-
-		.image.fit {
-			display: block;
-			margin: 0 0 2em 0;
-			width: 100%;
-		}
-
-			.image.fit img {
-				width: 100%;
-			}
-
-		.image.main {
-			display: block;
-			margin: 2.5em 0;
-			width: 100%;
-		}
-
-			.image.main img {
-				width: 100%;
-			}
-
-			@media screen and (max-width: 736px) {
-
-				.image.main {
-					margin: 1.5em 0;
-				}
-
-			}
+	
+	.image img {
+	    display: block;
+	    max-width: 100%;
+	    height: auto;
+	    margin: 0 auto; /* 让图像水平居中 */
+	}
+	
+	.image.left, .image.right {
+	    max-width: 45%; /* 设置最大宽度以确保两张图像分开 */
+	    float: none; /* 取消浮动 */
+	    display: inline-block; /* 设置为内联块以垂直对齐 */
+	    vertical-align: middle; /* 垂直对齐方式 */
+	    margin: 0; /* 重置外边距 */
+	}
+	
+	.image.left {
+	    margin-right: 5%; /* 设置两张图像之间的水平间距 */
+	}
+	
+	.image.right {
+	    margin-left: 5%; /* 设置两张图像之间的水平间距 */
+	}
+	
+	@media screen and (max-width: 736px) {
+	    .image.left, .image.right {
+	        max-width: 100%; /* 在较小屏幕上，让图像充满宽度 */
+	        display: block; /* 将它们显示为块级元素以适应小屏幕 */
+	        margin: 1em auto; /* 设置外边距以在小屏幕上居中显示 */
+	    }
+	}
 
 /* List */
 
