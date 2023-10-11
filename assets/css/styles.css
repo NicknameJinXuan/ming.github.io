@@ -1,0 +1,19 @@
+/* 新增样式 */
+.image-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.image {
+    flex: 1;
+    text-align: center;
+}
+
+.image img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto; /* 让图像水平居中 */
+}
+
+/* 其他样式保持不变 */
